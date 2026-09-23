@@ -1,0 +1,32 @@
+<div class="login-page">
+  <section class="login-brand">
+    <div class="institution">◉ &nbsp; I.E. N.° 20191 “CERRO ALEGRE”</div>
+    <div class="brand-content">
+      <h1>Convivencia<br>escolar, en orden</h1>
+      <p>Registra, organiza y da seguimiento a los casos de bullying con la información siempre centralizada y al alcance del personal responsable.</p>
+      <div class="network"><i></i><i></i><i></i><i></i><b></b><span></span></div>
+    </div>
+    <small>Institución Educativa N.° 20191 Cerro Alegre<br>Sistema de gestión de convivencia escolar</small>
+  </section>
+  <section class="login-side">
+    <div class="login-box">
+      <div class="eyebrow">ACCESO AL SISTEMA</div>
+      <h2>Inicia sesión</h2>
+      <p>Ingresa con las credenciales asignadas por la institución educativa.</p>
+      <label>Ingresar como</label>
+      <div class="roles">
+        <button type="button" [class.active]="role==='Administrador'" (click)="role='Administrador'">Administrador</button>
+        <button type="button" [class.active]="role==='Convivencia escolar'" (click)="role='Convivencia escolar'">Convivencia escolar</button>
+        <button type="button" [class.active]="role==='Docente / tutor'" (click)="role='Docente / tutor'">Docente / tutor</button>
+      </div>
+      <label>Correo institucional</label>
+      <input [(ngModel)]="email" type="email" placeholder="nombre.apellido@institucion.edu.pe">
+      <label>Contraseña</label>
+      <input [(ngModel)]="password" type="password" placeholder="••••••••">
+      <div class="login-options"><label class="remember"><input type="checkbox"> Recordar mi cuenta</label><a href="#" (click)="$event.preventDefault(); notify('Comunícate con el administrador del sistema.')">¿Olvidaste tu contraseña?</a></div>
+      <button class="login-btn" (click)="login()">Ingresar</button>
+      <div class="restricted">acceso restringido</div>
+      <div class="note">Solo personal autorizado por la institución educativa puede acceder. Si no tienes una cuenta, comunícate con el administrador del sistema.</div>
+    </div>
+  </section>
+</div>

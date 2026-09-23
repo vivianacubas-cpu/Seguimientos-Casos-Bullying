@@ -1,0 +1,7 @@
+<app-shell title="Casos">
+<div class="page">
+<div class="eyebrow">GESTIÓN DE CASOS</div><h1 class="page-title">Casos registrados</h1>
+<div class="filters"><input [(ngModel)]="search" placeholder="Buscar por estudiante o código de caso"><select [(ngModel)]="status"><option value="">Todos los estados</option><option>Reportado</option><option>En evaluación</option><option>En seguimiento</option><option>Cerrado</option></select><select><option>Todos los responsables</option><option>M. Rojas</option><option>J. Paredes</option></select><select><option>Todas las fechas</option></select></div>
+<section class="card-panel"><table class="table"><thead><tr><th>Código</th><th>Estudiante</th><th>Tipo</th><th>Lugar</th><th>Fecha</th><th>Estado</th><th>Responsable</th><th></th></tr></thead>
+<tbody><tr *ngFor="let r of filtered"><td>{{r.code}}</td><td>{{r.student}}</td><td>{{r.type}}</td><td>{{r.place}}</td><td>{{r.date}}</td><td><span class="badge" [class]="cls(r.status)">{{r.status}}</span></td><td>{{r.responsible}}</td><td><a [routerLink]="['/cases',r.code]" class="link">Ver caso →</a></td></tr></tbody></table></section>
+</div></app-shell>

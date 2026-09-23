@@ -1,0 +1,11 @@
+<app-shell title="Registrar caso"><div class="page"><div class="eyebrow">NUEVO REGISTRO</div><h1 class="page-title">Registrar caso</h1>
+<div class="create-grid"><section class="card-panel"><h2>Datos del incidente</h2><div class="form-grid">
+<label>Fecha del incidente<input type="date" [(ngModel)]="date"></label><label>Lugar<input [(ngModel)]="place" placeholder="Aula, patio, entorno digital"></label>
+<label>Tipo de bullying<select [(ngModel)]="type"><option>Agresión física</option><option>Agresión verbal</option><option>Exclusión social</option><option>Ciberbullying</option><option>Amenazas</option><option>Burlas reiteradas</option></select></label>
+<label>Responsable del seguimiento<select [(ngModel)]="responsible"><option>Milagros Rojas</option><option>Jorge Paredes</option></select></label>
+<label class="wide">Descripción de la situación<textarea [(ngModel)]="description" rows="5" placeholder="Describe brevemente lo ocurrido, sin incluir juicios de valor."></textarea></label>
+<label class="wide">Estudiantes involucrados<input [(ngModel)]="students" placeholder="Escribe los nombres de los estudiantes involucrados"></label>
+<label class="wide">Observaciones adicionales (opcional)<textarea [(ngModel)]="observations" rows="4" placeholder="Testigos, antecedentes u otra información relevante."></textarea></label>
+</div><div class="actions"><button class="btn-secondary" (click)="cancel()">Cancelar</button><button class="btn-primary" (click)="save()">Registrar caso</button></div></section>
+<aside class="card-panel info"><h3>¿Cómo registrar un caso?</h3><ol><li>Ingresa la fecha, lugar y tipo de incidente.</li><li>Describe la situación con hechos concretos.</li><li>Agrega los estudiantes involucrados.</li><li>Asigna un responsable de seguimiento.</li><li>El caso se crea con estado “Reportado”.</li></ol><div class="conf"><b>Confidencialidad</b><br>La información registrada es confidencial y solo será visible para personal autorizado.</div></aside></div>
+</div></app-shell>

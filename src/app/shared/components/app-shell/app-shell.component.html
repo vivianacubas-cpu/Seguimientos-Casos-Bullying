@@ -1,0 +1,28 @@
+<div class="shell">
+  <aside class="sidebar">
+    <div class="school">
+      <span class="school-mark">●</span>
+      <div>INSTITUCIÓN<br>EDUCATIVA<br>“CERRO ALEGRE”</div>
+    </div>
+    <nav>
+      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">● <span>Panel general</span></a>
+      <a routerLink="/cases" routerLinkActive="active">● <span>Casos</span></a>
+      <a routerLink="/cases/nuevo" routerLinkActive="active">● <span>Registrar caso</span></a>
+      <a routerLink="/seguimiento" routerLinkActive="active">● <span>Alertas</span></a>
+      <a routerLink="/reportes" routerLinkActive="active">● <span>Reportes</span></a>
+      <div class="section-label">ADMINISTRACIÓN</div>
+      <a routerLink="/usuarios" routerLinkActive="active">● <span>Usuarios</span></a>
+    </nav>
+    <button class="logout" (click)="logout()">↪ Cerrar sesión</button>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="top-title">{{ title }}</div>
+      <div class="top-actions">
+        <button class="bell" title="Notificaciones">♧</button>
+        <a routerLink="/cases/nuevo" class="new-btn">+ Registrar caso</a>
+      </div>
+    </header>
+    <ng-content></ng-content>
+  </main>
+</div>

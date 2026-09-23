@@ -1,0 +1,4 @@
+<app-shell title="Alertas"><div class="page"><div class="eyebrow">SEGUIMIENTO</div><h1 class="page-title">Alertas</h1>
+<div class="stats"><div class="stat red"><span>VENCIDAS</span><b>3</b><small>Seguimiento sin registrar</small></div><div class="stat gold"><span>PRÓXIMAS</span><b>5</b><small>Vencen en los próximos 7 días</small></div><div class="stat green"><span>ATENDIDAS</span><b>12</b><small>Realizadas este mes</small></div></div>
+<section class="card-panel alerts-panel"><div class="search">🔎 <input placeholder="Buscar por estudiante o código de caso"></div><div *ngFor="let a of alerts" class="alert" [class.orange]="a[2].includes('Próximo')"><b>{{a[0]}} · {{a[1]}}</b><strong>{{a[2]}}</strong><small>{{a[3]}} · {{a[4]}}</small><button>Ver caso</button></div></section>
+</div></app-shell>

@@ -1,0 +1,5 @@
+<app-shell title="Usuarios"><div class="page"><div class="eyebrow">ADMINISTRACIÓN</div><h1 class="page-title">Usuarios</h1>
+<div class="stats"><div class="stat"><span>USUARIOS ACTIVOS</span><b>14</b><small>Con acceso al sistema</small></div><div class="stat"><span>RESPONSABLES DE CONVIVENCIA</span><b>2</b><small>Con permisos de gestión</small></div><div class="stat"><span>DOCENTES Y TUTORES</span><b>11</b><small>Con acceso a consultas</small></div></div>
+<section class="card-panel users"><div class="filters"><input placeholder="Buscar por nombre o correo"><select><option>Todos los roles</option></select><select><option>Todos los estados</option></select></div>
+<table class="table"><tr><th>Usuario</th><th>Rol</th><th>Correo</th><th>Estado</th><th></th></tr><tr *ngFor="let u of users"><td><b>{{u[0]}}</b> {{u[1]}}</td><td><span class="role">{{u[2]}}</span></td><td>{{u[3]}}</td><td>{{u[4]}}</td><td><button>Editar</button></td></tr></table></section>
+</div></app-shell>

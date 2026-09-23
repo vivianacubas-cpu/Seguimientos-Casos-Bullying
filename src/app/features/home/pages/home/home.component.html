@@ -1,0 +1,22 @@
+<app-shell title="Panel general">
+<div class="page">
+  <div class="eyebrow">SÁBADO, 23 DE AGOSTO</div><h1 class="page-title">Panel general</h1>
+  <div class="stats">
+    <div class="stat red"><span>REPORTADOS</span><b>6</b><small>Casos pendientes de evaluación</small></div>
+    <div class="stat gold"><span>EN EVALUACIÓN</span><b>4</b><small>En revisión por el responsable</small></div>
+    <div class="stat green"><span>EN SEGUIMIENTO</span><b>9</b><small>Con acciones activas</small></div>
+    <div class="stat blue"><span>CERRADOS</span><b>21</b><small>Casos finalizados este año</small></div>
+  </div>
+  <div class="home-grid">
+    <section class="card-panel"><div class="panel-head"><h2>Casos recientes</h2><a routerLink="/cases">Ver todos →</a></div>
+      <table class="table"><thead><tr><th>Código</th><th>Estudiante</th><th>Tipo</th><th>Estado</th><th>Responsable</th></tr></thead>
+      <tbody><tr *ngFor="let c of cases"><td>{{c.code}}</td><td>{{c.student}}</td><td>{{c.type}}</td><td><span class="badge" [class]="cls(c.status)">{{c.status}}</span></td><td>{{c.responsible}}</td></tr></tbody></table>
+    </section>
+    <section class="card-panel"><div class="panel-head"><h2>Alertas pendientes</h2><a routerLink="/seguimiento">Ver todas →</a></div>
+      <div class="alert"><b>Seguimiento vencido — CB-0139</b><small>Última acción registrada hace 8 días. Responsable: J. Paredes</small></div>
+      <div class="alert"><b>Evaluación pendiente — CB-0142</b><small>Caso reportado hace 2 días, aún sin evaluar.</small></div>
+      <div class="alert orange"><b>Próximo seguimiento — CB-0141</b><small>Revisar avance del caso el 27 de agosto.</small></div>
+    </section>
+  </div>
+</div>
+</app-shell>
